@@ -1,0 +1,51 @@
+$primary: rgb(0, 166, 255);
+$secondary: blue;
+$clear: yellow;
+$font1: Jaro, Tahoma;
+$font2: Tahoma, Verdana;
+$margin: 10px;
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 35px $font2;
+}
+
+h1 {
+    font: 24px $font1;
+    text-align: center;
+    font-weight: bold;
+    margin: $margin;
+}
+
+.header {
+    background: $primary;
+    padding: $margin;
+    .header-nav {
+        float: right;
+        ul {
+            list-style: none;
+            margin-top: $margin;
+            li {
+                display: inline-block;
+                margin: $margin;
+                a {
+                    color: $secondary;
+                    text-decoration: none;
+                    font: 20px $font1;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    &:hover{
+                        color: $clear;
+                    }
+                }
+            }
+        }
+    }
+    .header-logo img{
+        width: 200px;
+    }
+}

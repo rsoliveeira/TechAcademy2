@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font: 35px Tahoma, Verdana; }
+
+h1 {
+  font: 24px Jaro, Tahoma;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px; }
+
+.header {
+  background: #00a6ff;
+  padding: 10px; }
+  .header .header-nav {
+    float: right; }
+    .header .header-nav ul {
+      list-style: none;
+      margin-top: 10px; }
+      .header .header-nav ul li {
+        display: inline-block;
+        margin: 10px; }
+        .header .header-nav ul li a {
+          color: blue;
+          text-decoration: none;
+          font: 20px Jaro, Tahoma;
+          font-weight: bold;
+          text-transform: uppercase; }
+          .header .header-nav ul li a:hover {
+            color: yellow; }
+  .header .header-logo img {
+    width: 200px; }
+
+/*# sourceMappingURL=style.css.map */
