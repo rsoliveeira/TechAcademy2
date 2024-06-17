@@ -1,51 +1,152 @@
-$primary: rgb(0, 166, 255);
-$secondary: blue;
-$clear: yellow;
-$font1: Jaro, Tahoma;
-$font2: Tahoma, Verdana;
-$margin: 10px;
+$primary: #22577a;
+$secondary: #0DCAF0;
+$terciaria: #57cc99;
+$text-color: #FFF;
+$btn-color: #386641;
+$hover-color: darken($btn-color, 10%);
+$font1: "Jersey 25", Inter, Arial;
+$font2: Inter, Arial, Tahoma;
+$font3: "Press Start 2P";
 
-*{
-    padding: 0;
-    margin: 0;
-}
 
 body {
-    font: 35px $font2;
+    background-color: #38a3a5; 
 }
-
-h1 {
-    font: 24px $font1;
-    text-align: center;
-    font-weight: bold;
-    margin: $margin;
-}
-
-.header {
+.navbar {
     background: $primary;
-    padding: $margin;
-    .header-nav {
-        float: right;
-        ul {
-            list-style: none;
-            margin-top: $margin;
-            li {
-                display: inline-block;
-                margin: $margin;
-                a {
-                    color: $secondary;
-                    text-decoration: none;
-                    font: 20px $font1;
-                    font-weight: bold;
-                    text-transform: uppercase;
-                    &:hover{
-                        color: $clear;
-                    }
-                }
+    .navbar-brand img {
+        height: 100px;
+    }
+
+    .nav-link {
+        font: 25px $font1;
+        color: #FFF;
+        text-transform: uppercase;
+        &:hover {
+            color: $secondary;
+        }
+    }
+
+    .navbar-nav .nav-link.show {
+        color: $secondary;
+    }
+
+    .dropdown-menu {
+        background: $primary;
+        border-radius: 0;
+        border-top: 5px solid $secondary;
+        .dropdown-item {
+            font: 20px $font1;
+            text-transform: uppercase;
+            color: $secondary;
+        }
+    }
+    .btn {
+        margin-left: 5px;
+    }
+}
+
+.btn {
+    font: 20px $font1;
+    border-radius: 0;
+}
+
+.container {
+    padding: 2rem 1rem;
+
+    h1 {
+        color: $text-color;
+        font-family: $font3;
+        margin-bottom: 2rem;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+// Card Estilos
+.card {
+    background-color: $terciaria;
+    border: 1px solid $primary;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+    .card-img-top {
+        width: 100%;
+        height: 500px; // ajuste conforme necessário
+        object-fit: cover;
+    }
+    
+
+    .card-body {
+        padding: 1rem;
+
+        p {
+            font: 15px $font3;
+            margin: 0.5rem 0;
+            color: #000000;
+        }
+
+        .btn {
+            background-color: $btn-color;
+            color: $text-color;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            text-transform: uppercase;
+            margin: 0.25rem;
+
+            &:hover {
+                background-color: #6a994e;
+                color:#000000;
+            }
+
+            i {
+                margin-right: 0.5rem;
             }
         }
     }
-    .header-logo img{
-        width: 200px;
+}
+
+.footer {
+    font: 20px $font1;
+    color: #FFFFFF;
+    background: $primary;
+    padding: 2% 2%;
+    text-align: center;
+    width: 100%; 
+    height: 100px;
+
+    p {
+        margin: 0;
+    }
+
+    .social-media {
+        margin-top: 10px;
+
+        a {
+            color: #FFFFFF;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5rem;
+
+            &:hover {
+                color: #06BFFF;
+            }
+
+            i {
+                margin: 0 5px;
+            }
+        }
     }
 }
+
+.carousel-item img {
+    object-fit: cover; 
+    height: 690px ;
+    width: 100%;
+    }
+
