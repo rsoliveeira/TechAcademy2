@@ -43,7 +43,7 @@
                 <div class="card-body text-center">
                     <p><strong>SUBMARINE ADVENTURE</strong></p>
                     <p>
-                        <a href="games/1" title="JOGAR" class="btn btn-info">
+                        <a href="game" class="btn btn-info">
                             <i class="bi bi-controller"></i> JOGAR
                         </a>
                         <a href="games/1" title="Detalhes" class="btn btn-info">
