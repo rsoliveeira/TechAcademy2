@@ -2,10 +2,13 @@
     header('Access-Control-Allow-Origin: *');
     header("Content-type: application/json; charset=utf-8");
 
-    $path = "https://www.professorburnes.com.br/stem/images/";
+    $path = "http://localhost/modulo02/imagens/";
 
-    $banners[0] = array("nome"=>"Fallout 76","imagem"=>"{$path}banner1.jpg","id_game"=>1);
-    $banners[1] = array("nome"=>"Street Fighter 6","imagem"=>"{$path}banner2.jpg","id_game"=>2);
-    $banners[2] = array("nome"=>"Mortal Kombal 1","imagem"=>"{$path}banner3.jpg","id_game"=>3);
+    $banners[0] = array("nome"=>"Submarine Adventure","imagem"=>"{$path}bannerSubmarineAdventure.jpeg","id_game"=>1);
+    $banners[1] = array("nome"=>"GalacticAttack","imagem"=>"{$path}bannerGalacticAttack.jpeg","id_game"=>2);
+    $banners[2] = array("nome"=>"Birdy","imagem"=>"{$path}bannerBirdy.jpeg","id_game"=>3);
+    $banners[4] = array("nome"=>"Wildwest","imagem"=>"{$path}bannerWildwest.jpeg","id_game"=>5);
+    $banners[5] = array("nome"=>"SoulsDark","imagem"=>"{$path}banneSoulsDark.jpeg","id_game"=>6);
 
+    
     echo json_encode($banners);

@@ -2,11 +2,11 @@
     header('Access-Control-Allow-Origin: *');
     header("Content-type: application/json; charset=utf-8");
 
-    $path = "https://www.professorburnes.com.br/stem/images/";
+    $path = "http://localhost/modulo02/imagens/";
 
     $fotos[1] = array(
-        array("foto"=>"{$path}fallout1.jpg"),
-        array("foto"=>"{$path}fallout2.jpg"),
+        array("foto"=>"{$path}bannerSubmarineAdventure.jpg"),
+        array("foto"=>"{$path}Poster.jpg"),
         array("foto"=>"{$path}fallout3.jpg"),
         array("foto"=>"{$path}fallout4.jpg"),
     );

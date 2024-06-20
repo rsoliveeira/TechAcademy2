@@ -24,14 +24,27 @@
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="shortcut" href="images/icone.png">
+    <link rel="shortcut" href="imagens/icone.png">
 </head>
 
 <body>
+
+<?php
+	$url = "http://localhost/modulo02/api/games.php";
+
+	$dadosJson = file_get_contents($url);
+
+	$dadosBanners = json_decode($dadosJson);
+
+	foreach ($dadosBanners as $dados) {
+	}
+
+?>
+
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">
-                <img src="images/logo-removebg-preview.png" alt="Stem">
+                <img src="imagens/logo-removebg-preview.png" alt="RS SUBBY" title="RS SUBBY">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,31 +62,36 @@
                             Games
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="game1">Jogo1</a></li>
-                            <li><a class="dropdown-item" href="game2">Jogo2</a></li>
-                            <li><a class="dropdown-item" href="game3">Jogo3</a></li>
-                            <li><a class="dropdown-item" href="game4">Jogo4</a></li>
-                        </ul>
-                </ul>
-            </div>
-        </div>
+                        <?php
+                        foreach ($dadosBanners as $dados) {
+                        ?>
+                        <li><a class="dropdown-item" href="games/<?= $dados->id ?>"><?= $dados->nome ?></a></li>
+                        
+                    <?php
+                    }
+                    ?>
+                	</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
     </nav>
 
     <main>
         <?php
-        //print_r($_GET);
-        $pagina = "home";
-        //verificar se foi clicado em algum menu
-        if (isset($_GET["pagina"])) {
-            $pagina = $_GET["pagina"] ?? "home";
-            // games/1
-            $pagina = explode("/", $pagina);
-            //print_r($pagina);
-            $codigo = $pagina[1] ?? NULL;
-            $pagina = $pagina[0] ?? "home";
-        }
+    if (isset($_GET["param"])) {
+        $param = $_GET["param"];
+        $p = explode("/", $param);
+    }
 
-        $pagina = "pages/{$pagina}.php";
+    $pages = $p[0] ?? "home";
+    $jogo = $p[1] ?? NULL;
+
+    if ($pages == "jogo") {
+        $pagina = "jogo/{$jogo}.php";
+    } else {
+        $pagina = "pages/{$pages}.php";
+    }
 
         if (file_exists($pagina)) {
             include $pagina;
