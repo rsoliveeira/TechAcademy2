@@ -122,4 +122,46 @@ body {
   width: 100%;
 }
 
+.container img.w-100 {
+  width: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: #333;
+  font-family: 'Press Start 2P', cursive;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+}
+
+.fotos {
+  margin-top: 20px;
+}
+
+.fotos .img-fluid {
+  margin-bottom: 15px;
+}
+
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
 /*# sourceMappingURL=style.css.map */

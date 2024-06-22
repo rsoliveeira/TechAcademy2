@@ -65,7 +65,7 @@
                         <?php
                         foreach ($dadosBanners as $dados) {
                         ?>
-                        <li><a class="dropdown-item" href="games/<?= $dados->id ?>"><?= $dados->nome ?></a></li>
+                        <li><a class="dropdown-item" href="game/<?= $dados->id ?>"><?= $dados->nome ?></a></li>
                         
                     <?php
                     }
