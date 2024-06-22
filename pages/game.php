@@ -25,23 +25,44 @@ $jogo = $dadosApi->$id;
         </div>
     </div>
 
-    <h2 class="text-center">Fotos do Game:</h2>
-    <div class="row fotos" data-aos="fade">
+    <h2 class="text-center">Fotos do Jogo</h2>
+    <div class="row">
+    <?php
+    // Verifique se o conteúdo foi recuperado com sucesso
+    $dadosFotos = file_get_contents("http://localhost/modulo02/api/fotos.php/");
+    
+    if ($dadosFotos === FALSE) {
+        echo "Erro ao recuperar os dados.";
+        exit;
+    }
+
+    // Decodifique o JSON
+    $dadosFotos = json_decode($dadosFotos);
+
+    // Defina a variável $codigo com a chave correta
+    $codigo = 1; // Use a chave que você precisar
+
+    // Verifique se a propriedade existe no objeto decodificado
+    if (isset($dadosFotos->$codigo)) {
+        $dados = $dadosFotos->$codigo;
+    } else {
+        echo "Código não encontrado.";
+        exit;
+    }
+
+    $i = 1;
+    foreach($dados as $foto) {
+?>
         <div class="col-12 col-md-3">
-            <img src="imagens/fase1.jpg" alt="Fase 01" class="img-fluid">
+            <a href="<?=$foto->foto?>" title="Foto <?=$i?>" data-fslightbox>
+                <img src="<?=$foto->foto?>" alt="Foto <?=$i?>" class="w-100">
             </a>
         </div>
-        <div class="col-12 col-md-3">
-            <img src="imagens/fase2.jpg" alt="Fase 01" class="img-fluid">
-            </a>
-        </div>
-        <div class="col-12 col-md-3">
-            <img src="imagens/fase3.jpg" alt="Fase 01" class="img-fluid">
-            </a>
-        </div>
-        <div class="col-12 col-md-3">
-            <img src="imagens/fase4.jpg" alt="Fase 01" class="img-fluid">
-            </a>
-        </div>
+<?php
+        $i++;
+    }
+?>
+
     </div>
+</div>
 </div>

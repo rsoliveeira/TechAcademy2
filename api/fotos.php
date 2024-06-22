@@ -5,16 +5,16 @@
     $path = "http://localhost/modulo02/imagens/";
 
     $fotos[1] = array(
-        array("foto"=>"{$path}bannerSubmarineAdventure.jpg"),
-        array("foto"=>"{$path}Poster.jpg"),
-        array("foto"=>"{$path}fallout3.jpg"),
-        array("foto"=>"{$path}fallout4.jpg"),
+        array("foto"=>"{$path}SubmarineAdventure1.jpg"),
+        array("foto"=>"{$path}SubmarineAdventure2.jpg"),
+        array("foto"=>"{$path}SubmarineAdventure3.jpg"),
+        array("foto"=>"{$path}SubmarineAdventure4.jpg"),
     );
 
     $fotos[2] = array(
-        array("foto"=>"{$path}sf1.jpg"),
-        array("foto"=>"{$path}sf2.jpg"),
-        array("foto"=>"{$path}sf3.jpg"),
+        array("foto"=>"{$path}GalacticAttack1.png"),
+        array("foto"=>"{$path}GalacticAttack2.png"),
+        array("foto"=>"{$path}GalacticAttack3.png"),
         array("foto"=>"{$path}sf4.jpg"),
     );
 

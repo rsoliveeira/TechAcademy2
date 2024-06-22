@@ -103,7 +103,7 @@
     </main>
 
     <footer id="contato" class="footer">
-		<p>RODRIGO OLIVEIRA© 2024 </p>
+		<p>RODRIGO OLIVEIRA© 2024</p>
         <p class="social-media">
             <a href="https://www.github.com" title="GitHub">
                 <i class="fab fa-github"></i>
