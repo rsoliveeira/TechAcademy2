@@ -10,59 +10,39 @@ $jogo = $dadosApi->$id;
 
 ?>
 
+<div class="banner" data-aos="fade-left">   
+<img src="<?=$jogo->banner?>"  class="w-100">
+</div>  
 
 <div class="container">
-    <img src="<?=$jogo->banner?>" alt="SubmarineAdventure" title="SubmarineAdventure" class="w-100">
-    <h1 class="text-center"><?=$jogo->nome?></h1>
-
-    <div class="row my-4">
-        <div class="col-12 col-md-4" data-aos="fade-left">
-            <img class="imgcapa" src="<?=$jogo->poster?>" class=>
+    <div class="row">
+        <div class="col-12 col-md-3" data-aos="fade-left">
+        <img src="<?=$jogo->poster?>" class="w-100">
         </div>
 
-        <div class="col-12 col-md-8" data-aos="fade-right">
-            <p><<?=$jogo->descricao?>
+        <div class="col-12 col-md-9" data-aos="fade-right">
+        <p><strong><text-justify><?=$jogo->descricao?></strong></text-justify></p>
         </div>
+        
     </div>
 
     <h2 class="text-center">Fotos do Jogo</h2>
-    <div class="row">
+ <div class="row">
+    
     <?php
     // Verifique se o conteúdo foi recuperado com sucesso
+    $id = $p[1] ?? NULL;
     $dadosFotos = file_get_contents("http://localhost/modulo02/api/fotos.php/");
-    
-    if ($dadosFotos === FALSE) {
-        echo "Erro ao recuperar os dados.";
-        exit;
-    }
+    $dadosFotos = json_decode($dadosFotos,true);
+    $dados = $dadosFotos->$id;
+    ?>
 
-    // Decodifique o JSON
-    $dadosFotos = json_decode($dadosFotos);
-
-    // Defina a variável $codigo com a chave correta
-    $codigo = 1; // Use a chave que você precisar
-
-    // Verifique se a propriedade existe no objeto decodificado
-    if (isset($dadosFotos->$codigo)) {
-        $dados = $dadosFotos->$codigo;
-    } else {
-        echo "Código não encontrado.";
-        exit;
-    }
-
-    $i = 1;
-    foreach($dados as $foto) {
-?>
         <div class="col-12 col-md-3">
-            <a href="<?=$foto->foto?>" title="Foto <?=$i?>" data-fslightbox>
-                <img src="<?=$foto->foto?>" alt="Foto <?=$i?>" class="w-100">
+            <a href="<?=$dados->dados?>" title="Foto <?=$id?>" data-fslightbox>
+                <img src="<?=$dados->dados?>" alt="Foto <?=$id?>" class="w-100">
             </a>
         </div>
-<?php
-        $i++;
-    }
-?>
-
-    </div>
+        <?php
+    ?>
 </div>
 </div>

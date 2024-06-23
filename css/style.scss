@@ -145,6 +145,8 @@ body {
     }
 }
 
+
+
 .carousel-item img {
     object-fit: cover; 
     width: 100%;
@@ -159,6 +161,11 @@ body {
         text-align: center;
         font-family: 'Press Start 2P', cursive;
     }
+
+    .text-justify{
+        font-family:$font2  ;
+    }
+
     
     .img-fluid {
         max-width: 100%;

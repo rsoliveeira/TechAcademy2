@@ -131,6 +131,10 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
+.text-justify {
+  font-family: Inter, Arial, Tahoma;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;

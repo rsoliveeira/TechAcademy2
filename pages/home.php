@@ -58,7 +58,6 @@ $dadosGamesEquipes = json_decode($jsonGamesEquipes, true);
     <?php
         foreach ($dadosGames as $dados) {
             $id = $dados['id'];
-            $nome = $dados['nome'];
             $capa = $dados['capa'];
             $jogoIframe = isset($dadosGamesEquipes[$id]) ? $dadosGamesEquipes[$id]['jogo'] : '';
         ?>
@@ -67,8 +66,6 @@ $dadosGamesEquipes = json_decode($jsonGamesEquipes, true);
             <div class="card" data-aos="fade-up" data-aos-delay="50">
                 <img src="<?=$capa ?>" alt="<?=$nome ?>" class="card-img-top" loading="lazy">
                 <div class="card-body text-center">
-                    <p><strong><?=$nome ?></strong></p>
-                    <p>
                         <a href="gamesequipes.php?id=<?=$id ?>" title="JOGAR" class="btn btn-info">
                             <i class="bi bi-controller"></i> JOGAR
                         </a>
