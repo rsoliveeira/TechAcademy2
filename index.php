@@ -8,7 +8,7 @@
     <meta name="description" content="Sua página de Games, com lançamentos e jogos pagos e gratuitos">
     <meta name="Keywords" content="games, jogos, lançamentos">
 
-    <base href="http://localhost/modulo02/">
+    <base href="http://localhost/teste/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -30,15 +30,18 @@
 <body>
 
 <?php
-	$url = "http://localhost/modulo02/api/games.php";
+	$url = "http://localhost/teste/api/games.php";
 
-	$dadosJson = file_get_contents($url);
+	$dadosApi = file_get_contents($url);
 
-	$dadosBanners = json_decode($dadosJson);
+	$dadosJogos = json_decode($dadosApi);
 
-	foreach ($dadosBanners as $dados) {
-	}
+    $url = "http://localhost/teste/api/games.php";
 
+    $dadosApi = file_get_contents($url);
+
+	$dadosJogosEquipes = json_decode($dadosApi);
+    
 ?>
 
     <nav class="navbar navbar-expand-lg">
@@ -63,13 +66,11 @@
                         </a>
                         <ul class="dropdown-menu">
                         <?php
-                        foreach ($dadosBanners as $dados) {
+                            foreach($dadosJogos as $dados) {
+                                    echo "<li><a class='dropdown-item' href='game/{$dados->id}'>{$dados->nome}</a>
+                                    </li>";
+                                }
                         ?>
-                        <li><a class="dropdown-item" href="game/<?= $dados->id ?>"><?= $dados->nome ?></a></li>
-                        
-                    <?php
-                    }
-                    ?>
                 	</ul>
 					</li>
 				</ul>
@@ -78,20 +79,20 @@
     </nav>
 
     <main>
-        <?php
-    if (isset($_GET["param"])) {
-        $param = $_GET["param"];
-        $p = explode("/", $param);
-    }
+    <?php
+            //print_r($_GET);
+            $pagina = "home";
+            //verificar se foi clicado em algum menu
+            if (isset($_GET["pagina"])) {
+                $pagina = $_GET["pagina"] ?? "home";
+                // games/1
+                $pagina = explode("/", $pagina);
+                //print_r($pagina);
+                $codigo = $pagina[1] ?? NULL;
+                $pagina = $pagina[0] ?? "home";
+            }
 
-    $pages = $p[0] ?? "home";
-    $jogo = $p[1] ?? NULL;
-
-    if ($pages == "jogo") {
-        $pagina = "jogo/{$jogo}.php";
-    } else {
-        $pagina = "pages/{$pages}.php";
-    }
+            $pagina = "pages/{$pagina}.php";
 
         if (file_exists($pagina)) {
             include $pagina;
@@ -103,12 +104,12 @@
     </main>
 
     <footer id="contato" class="footer">
-		<p>RODRIGO OLIVEIRA© 2024</p>
+		<p> DESENVOLVIDO POR RODRIGO OLIVEIRA© 2024</p>
         <p class="social-media">
-            <a href="https://www.github.com" title="GitHub">
+            <a href="https://github.com/rsoliveeira" title="GitHub">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="mailto:example@example.com" title="E-mail">
+            <a href="mailto:rodrigo_oliveeira@hotmail.com" title="E-mail">
                 <i class="fas fa-envelope"></i>
             </a>
             <a href="https://www.instagram.com" title="Instagram">

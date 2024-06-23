@@ -2,7 +2,7 @@
     header('Access-Control-Allow-Origin: *');
     header("Content-type: application/json; charset=utf-8");
 
-    $path = "http://localhost/modulo02/imagens/";
+    $path = "http://localhost/teste/imagens/";
 
     $equipe[1] = array("nome"=>"Rodrigo Oliveira","cargo"=>"Desenvolvedor do Game Submarine Adventure","foto"=>"{$path}Rodrigo.jpeg");
     $equipe[2] = array("nome"=>"Milena Oliveira","cargo"=>"Desenvolvedora do Game Galactic Attack","foto"=>"{$path}milena.jpeg");
