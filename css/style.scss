@@ -192,4 +192,15 @@ body {
         margin-top: 1.5rem !important;
         margin-bottom: 1.5rem !important;
     }
+
+
+    .btn-custom {
+        background-color: $primary; // Cor verde base
+        color: white; // Cor do texto
+    }
+    
+    .btn-custom:hover {
+        background-color: $terciaria;
+    }
+    
     

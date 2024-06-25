@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rs Subby - Sua página de Games</title>
-    <meta name="description" content="Sua página de Games, com lançamentos e jogos pagos e gratuitos">
+    <title>RS SUBBY - PÁGINA DE GAMES </title>
+    <meta name="description" content="Sua página de Games gratuitos">
     <meta name="Keywords" content="games, jogos, lançamentos">
 
     <base href="http://localhost/teste/">
@@ -36,11 +36,7 @@
 
 	$dadosJogos = json_decode($dadosApi);
 
-    $url = "http://localhost/teste/api/games.php";
 
-    $dadosApi = file_get_contents($url);
-
-	$dadosJogosEquipes = json_decode($dadosApi);
     
 ?>
 
@@ -74,6 +70,13 @@
                 	</ul>
 					</li>
 				</ul>
+                <div class="d-flex">
+    <a href="contato" class="btn btn-custom" title="Contato">
+        <i class="fa-regular fa-envelope"></i> Entre em Contato
+    </a>
+</div>
+
+                </div>
 			</div>
 		</div>
     </nav>

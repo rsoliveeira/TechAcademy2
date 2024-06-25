@@ -131,6 +131,10 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
+.text-justify {
+  font-family: Inter, Arial, Tahoma;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -154,6 +158,15 @@ h1 {
 .my-4 {
   margin-top: 1.5rem !important;
   margin-bottom: 1.5rem !important;
+}
+
+.btn-custom {
+  background-color: #22577a;
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #57cc99;
 }
 
 /*# sourceMappingURL=style.css.map */

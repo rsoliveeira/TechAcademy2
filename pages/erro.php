@@ -3,10 +3,10 @@
         Erro - Página não encontrada!
     </h1>
     <p class="text-center">
-        <img src="images/404.png" alt="Erro 404">
+        <img src="imagens/404.png" alt="Erro 404">
     </p>
     <p class="text-center">
-        <a href="javascript:history.back()" title="Voltar" class="btn btn-info">
+        <a href="javascript:history.back()" title="Voltar" class="btn btn-success">
             <i class="fas fa-chevron-left"></i>
             Voltar à página anterior
         </a>

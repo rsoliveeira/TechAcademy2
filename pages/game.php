@@ -14,9 +14,9 @@ $dados = $dadosJogos->$codigo;
         </div>
 
         <div class="col-12 col-md-9" data-aos="fade-right">
-        <p>
+        <p><strong><text-justify>
                 <?=$dados->descricao?>
-            </p>
+                </strong></text-justify></p>
         </div>
 
     </div>
