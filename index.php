@@ -14,10 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jersey+25&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
@@ -29,16 +26,16 @@
 
 <body>
 
-<?php
-	$url = "http://localhost/teste/api/games.php";
+    <?php
+    $url = "http://localhost/teste/api/games.php";
 
-	$dadosApi = file_get_contents($url);
+    $dadosApi = file_get_contents($url);
 
-	$dadosJogos = json_decode($dadosApi);
+    $dadosJogos = json_decode($dadosApi);
 
 
-    
-?>
+
+    ?>
 
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -61,41 +58,41 @@
                             Games
                         </a>
                         <ul class="dropdown-menu">
-                        <?php
-                            foreach($dadosJogos as $dados) {
-                                    echo "<li><a class='dropdown-item' href='game/{$dados->id}'>{$dados->nome}</a>
+                            <?php
+                            foreach ($dadosJogos as $dados) {
+                                echo "<li><a class='dropdown-item' href='game/{$dados->id}'>{$dados->nome}</a>
                                     </li>";
-                                }
-                        ?>
-                	</ul>
-					</li>
-				</ul>
+                            }
+                            ?>
+                        </ul>
+                    </li>
+                </ul>
                 <div class="d-flex">
-    <a href="contato" class="btn btn-custom" title="Contato">
-        <i class="fa-regular fa-envelope"></i> Entre em Contato
-    </a>
-</div>
-
+                    <a href="contato" class="btn btn-custom" title="Contato">
+                        <i class="fa-regular fa-envelope"></i> Entre em Contato
+                    </a>
                 </div>
-			</div>
-		</div>
+
+            </div>
+        </div>
+        </div>
     </nav>
 
     <main>
-    <?php
-            //print_r($_GET);
-            $pagina = "home";
-            //verificar se foi clicado em algum menu
-            if (isset($_GET["pagina"])) {
-                $pagina = $_GET["pagina"] ?? "home";
-                // games/1
-                $pagina = explode("/", $pagina);
-                //print_r($pagina);
-                $codigo = $pagina[1] ?? NULL;
-                $pagina = $pagina[0] ?? "home";
-            }
+        <?php
+        //print_r($_GET);
+        $pagina = "home";
+        //verificar se foi clicado em algum menu
+        if (isset($_GET["pagina"])) {
+            $pagina = $_GET["pagina"] ?? "home";
+            // games/1
+            $pagina = explode("/", $pagina);
+            //print_r($pagina);
+            $codigo = $pagina[1] ?? NULL;
+            $pagina = $pagina[0] ?? "home";
+        }
 
-            $pagina = "pages/{$pagina}.php";
+        $pagina = "pages/{$pagina}.php";
 
         if (file_exists($pagina)) {
             include $pagina;
@@ -107,19 +104,19 @@
     </main>
 
     <footer id="contato" class="footer">
-		<p> DESENVOLVIDO POR RODRIGO OLIVEIRA© 2024</p>
+        <p> DESENVOLVIDO POR RODRIGO OLIVEIRA© 2024</p>
         <p class="social-media">
             <a href="https://github.com/rsoliveeira" title="GitHub">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="mailto:rodrigo_oliveeira@hotmail.com" title="E-mail">
+            <a href="https://rssubby.000webhostapp.com/contato" title="E-mail">
                 <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://www.instagram.com" title="Instagram">
+            <a href="https://www.instagram.com/odasilvar/" title="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
         </p>
-	</footer>
+    </footer>
 
 
     <!-- Scripts -->

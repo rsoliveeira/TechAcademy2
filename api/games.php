@@ -28,8 +28,8 @@
     <p>FICHA TÉCNICA</p> <p>Engine: Construct 3</p> <p>Plataforma: PC </p> <p>Mecânica: Corrida contra o Tempo </p> <p>Dispositivos de Entrada: Teclado</p>",
     "poster"=>"{$path}Time Sprint.jpeg","banner"=>"{$path}bannerTimeSprint.jpeg", "capa"=>"{$path}Time Sprint.jpeg", "jogo" => "http://localhost/teste/jogos/jogoTimeSprint");
 
-    $games[7] = array("id"=>7,"nome"=>"Escape From Space", "descricao"=>"<p>Escape From Space é um jogo eletrônico de ação e sobrevivência desenvolvido e publicado por Maria Eduarda. Lançado inicialmente para PC, Escape From Space permite que os jogadores assumam o papel de um astronauta perdido em uma nave espacial abandonada. Prepare-se para enfrentar alienígenas hostis, resolver quebra-cabeças complexos e explorar ambientes perigosos, enquanto luta para encontrar uma maneira de escapar e voltar para casa.</p>
-    <p>FICHA TÉCNICA</p> <p>Engine: Construct 3</p> <p>Plataforma: PC </p> <p>Mecânica: Ação e Sobrevivência </p> <p>Dispositivos de Entrada: Teclado</p>",
+    $games[7] = array("id"=>7,"nome"=>"Escape From Space", "descricao"=>"<p>Escape From Space é um jogo eletrônico de ação e sobrevivência desenvolvido e publicado por Maria Eduarda. Lançado inicialmente para Dispositivo para PC, Escape From Space permite que os jogadores assumam o papel de um astronauta perdido em uma nave espacial abandonada. Prepare-se para enfrentar alienígenas hostis, resolver quebra-cabeças complexos e explorar ambientes perigosos, enquanto luta para encontrar uma maneira de escapar e voltar para casa.</p>
+    <p>FICHA TÉCNICA</p> <p>Engine: Construct 3</p> <p>Plataforma: Dispositivo com Tela Sensível ao Toque (Touchscreen) </p> <p>Mecânica: Ação e Sobrevivência </p> <p>Dispositivos de Entrada: Teclado </p>",
     "poster"=>"{$path}Escape From Space.jpeg","banner"=>"{$path}bannerEscapeSpace.jpeg", "capa"=>"{$path}Escape From Space.jpeg", "jogo" => "http://localhost/teste/jogos/jogoEscapefromSpace");
 
 

@@ -169,4 +169,13 @@ h1 {
   background-color: #57cc99;
 }
 
+.form-control {
+  font: 20px "Jersey 25", Inter, Arial;
+}
+
+.label-name {
+  font: 20px "Jersey 25", Inter, Arial;
+  color: #000000;
+}
+
 /*# sourceMappingURL=style.css.map */

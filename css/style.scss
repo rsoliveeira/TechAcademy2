@@ -148,6 +148,7 @@ body {
 
 
 .carousel-item img {
+
     object-fit: cover; 
     width: 100%;
     }
@@ -202,5 +203,18 @@ body {
     .btn-custom:hover {
         background-color: $terciaria;
     }
+    
+    .form-control {
+        font: 20px $font1;
+    }
+
+    .label-name {
+        font: 20px $font1;
+        color: #000000;
+    }
+
+
+    
+        
     
     
